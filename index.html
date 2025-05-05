@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하트리움 더 메트로 추가옵션계약</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 480px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        select, button {
+            margin: 10px 0;
+            padding: 12px;
+            font-size: 16px;
+            width: 100%;
+            max-width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .logo-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>하트리움 더 메트로 추가옵션계약</h1>
+
+        <div class="form-container">
+            <label for="typeSelect">타입선택</label>
+            <select id="typeSelect">
+                <option value="84A">84A</option>
+                <option value="84B">84B</option>
+                <option value="116A">116A</option>
+                <option value="116B">116B</option>
+                <option value="134">134</option>
+                <option value="216P">216P</option>
+                <option value="220P">220P</option>
+            </select>
+
+            <button onclick="goToNextPage()">추가옵션 계산하기</button>
+
+            <div class="logo-container">
+                <img src="logo.png" alt="하트리움 로고">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goToNextPage() {
+            const selectedType = document.getElementById('typeSelect').value;
+            window.location.href = `${selectedType}.html`;
+        }
+    </script>
+
+</body>
+</html>
